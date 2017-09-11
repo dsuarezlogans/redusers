@@ -1,0 +1,17 @@
+ {{#if errorMessage}}
+
+<div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Error!</strong> {{errorMessage}}
+</div>
+
+{{/if}}
+
+<h1>Search users</h1>
+
+<form class="form-inline" action="/user/search" method="POST">
+    <div class="form-group">
+        <input type="text" name="id" class="form-control" placeholder="Search users by id">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Search">
+</form>
